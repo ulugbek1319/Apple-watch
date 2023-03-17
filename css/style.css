@@ -29,16 +29,15 @@ body {
     color: var(--text-color);
 }
 
-*:focus {
-    outline: 2px dotted var(--primary);
-    outline-offset: 2px;
-}
-
 img {
     max-width: 100%;
     height: auto;
 }
 
+*:focus {
+    outline: 2px dashed var(--primary);
+    outline-offset: 2px;
+}
 
 /* AUTOFILL-STYLES */
 /*input:-webkit-autofill,
