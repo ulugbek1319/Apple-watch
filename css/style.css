@@ -2,6 +2,7 @@
 /* CUSTOM PROPS */
 :root {
     --primary: #ea625c;
+    --primary-dark: #c9514c;
     --text-color: #333; 
 }
 html {
@@ -89,6 +90,30 @@ select:-webkit-autofill:focus {
 }
 
 
+/* BUTTON */
+.button {
+    display: inline-block;
+    padding: 12px 39px;
+    border: 0;
+    background-color: var(--primary);
+    color: #fff;    
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--primary-dark);
+}
+
+.button:active {
+    opacity: 0.6;
+}
+
+
 /* MAIN-CONTENT */
 .main-content {
     flex-grow: 1;
@@ -166,63 +191,45 @@ select:-webkit-autofill:focus {
 
 
 /* HERO */
-.site-hero {
-    display: flex;
-    align-items: center;
+.hero {
+    padding-top: 140px;
+    padding-bottom: 185px;
+    border-bottom: 2px solid #ddd;
+    background-image: url(../img/intro-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: left calc(50% + 550px) bottom;
 }
-.site-hero-left {
-    margin-bottom: 50px;
+
+
+/* LEAD-CTA */
+.lead-cta {
+    width: 100%;
+    max-width: 490px;
 }
-.site-hero-heading {
-    display: flex;
-    margin: 0;
+
+.lead-cta-heading {
+    margin-top: 0;
     margin-bottom: 30px;
     font-size: 50px;
-    line-height: 150%;
-    font-weight: 700;
+    line-height: 1.2;
     color: #000;
 }
 
-.site-hero-text {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 30px;
-    width: 450px;
+.lead-cta-text {
+    padding-left: 37px;
     border-left: 3px solid #888;
-    font-size: 16px;
-    line-height: 150%;
-    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 30px;
     color: #777;
 }
 
-.site-hero-link {
-    padding: 12px 39px;
-    font-size: 18px;
-    line-height: 150%;
-    font-weight: 700;
-    background-color: var(--primary);
-    color: #fff;
-    text-decoration: none;
-}
-.site-hero-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-.site-hero-img {
-    width: 587px;
-    height: 565px;
-    object-fit: none;
-    
-}
 
 
 
 
 
 
-
-
+/* RETINA BG */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -231,4 +238,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
     
+    .hero {
+        background-image: url(../img/intro-bg@2x.jpg);
+    }
 }
