@@ -114,6 +114,32 @@ select:-webkit-autofill:focus {
 }
 
 
+/* BUTTON */
+.lined-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.lined-link::before {
+    width: 40px;
+    height: 3px;
+    margin-right: 10px;
+    background-color: var(--primary);
+    content: "";
+    transition: width 0.3s ease;
+}
+
+.lined-link:hover::before {
+    width: 60px;
+}
+
+
 /* MAIN-CONTENT */
 .main-content {
     flex-grow: 1;
@@ -224,9 +250,53 @@ select:-webkit-autofill:focus {
 }
 
 
+/* FEATURES */
+.feature {
+    padding: 70px;
+}
 
+.feature-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-self: self-start;
+    justify-content: space-between;
+}
 
+.feature-item {
+    width: 100%;
+    max-width: 280px;
 
+}
+
+.feature-heading {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #222;
+    text-transform: uppercase;
+}
+
+.feature-text {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.features-divider {
+    width: 8px;
+    height: 8px;
+    margin: 0;
+    border: 0;
+    background-color: #ddd;
+    box-shadow: 16px 0 0 0 #ddd,
+    32px 0 0 0 #ddd;
+}
 
 
 /* RETINA BG */
