@@ -94,6 +94,7 @@ select:-webkit-autofill:focus {
 .button {
     display: inline-block;
     padding: 12px 39px;
+    min-width: 260px;
     border: 0;
     background-color: var(--primary);
     color: #fff;    
@@ -102,6 +103,7 @@ select:-webkit-autofill:focus {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
+    text-align: center;
     transition: background-color 0.3s ease;
 }
 
@@ -241,12 +243,21 @@ select:-webkit-autofill:focus {
     color: #000;
 }
 
+.lead-cta-white .lead-cta-heading {
+    color: #fff;
+}
+
 .lead-cta-text {
     padding-left: 37px;
     border-left: 3px solid #888;
     margin-top: 0;
     margin-bottom: 30px;
     color: #777;
+}
+
+.lead-cta-white .lead-cta-text {
+    border-color: #fff;
+    color: #fff;
 }
 
 
@@ -299,6 +310,42 @@ select:-webkit-autofill:focus {
 }
 
 
+/* PROMO */
+.promo {
+    padding: 70px;
+    margin-bottom: 70px;
+}
+
+.promo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.promo-img {
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+}
+
+
+/* RUNNER */
+.runner {
+    padding-top: 240px;
+    padding-bottom: 240px;
+    height: 830px;
+    background-image: url(../img/runners-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.runners-lead-cta {
+    margin-left: auto;;
+}
+
+
 /* RETINA BG */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -310,5 +357,8 @@ only screen and (                min-resolution: 2dppx) {
     
     .hero {
         background-image: url(../img/intro-bg@2x.jpg);
+    }
+    .runner {
+        background-image: url(../img/runners-1@2x.jpg);
     }
 }
